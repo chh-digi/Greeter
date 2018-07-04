@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "allowJs": false,
+        "noImplicitAny": false,
+        "module": "es6",
+        "sourceMap": true,
+        "jsx": "react",
+        "experimentalDecorators": true,
+        "target": "es5",
+        "moduleResolution": "node",
+        "lib": [
+            "es6",
+            "dom"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "lib"
+    ]
+}
