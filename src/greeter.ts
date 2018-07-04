@@ -1,4 +1,22 @@
-console.debug("Hello Console");
+class Greeter {
 
-const greetElem = document.getElementById("greeter");
-greetElem.innerText = "Hello World";
+    greetElem:HTMLElement;
+    greetBtn:HTMLElement;
+
+    constructor() {
+        this.greetElem = document.getElementById("greetElem");
+        this.greetBtn = document.getElementById("greetBtn");
+
+        this.greetBtn.onclick = () => {
+            this.greet();
+        }
+
+    }
+
+    greet() {
+        this.greetElem.innerText = "Hello World :)";
+    }
+
+}
+
+new Greeter();
