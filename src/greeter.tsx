@@ -23,7 +23,7 @@ class Greeter extends React.Component<IProps, IState> {
                     <h1>{this.props.lead}</h1>
                     <hr />
                     <br />
-                    <input type="button" value="Greet!" onClick={ (e:any) => { this.setState({ toBeGreeted: this.state.tempInputValue }) } }/>
+                    <input type="button" value="Greet!" onClick={ (e:React.MouseEvent<HTMLInputElement>) => { this.setState({ toBeGreeted: this.state.tempInputValue }) } }/>
                     <input type="textbox" onChange={ (e:React.ChangeEvent<HTMLInputElement>) => { this.setState({ tempInputValue: e.target.value }) } } />
                     <h3>{this.props.message.replace("{0}", this.state.toBeGreeted )}</h3>
                </div>;
