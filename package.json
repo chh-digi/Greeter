@@ -8,12 +8,17 @@
     "start:dev": "webpack-dev-server"
   },
   "devDependencies": {
+    "@types/events": "1.2.0",
     "@types/flux": "3.1.7",
     "@types/react": "16.1.0",
     "@types/react-dom": "16.0.4",
+    "css-loader": "1.0.0",
     "flux": "3.1.3",
+    "node-sass": "4.9.2",
     "react": "16.4.1",
     "react-dom": "16.4.1",
+    "sass-loader": "7.0.3",
+    "style-loader": "0.21.0",
     "ts-loader": "4.4.2",
     "typescript": "2.9.2",
     "webpack": "4.14.0",

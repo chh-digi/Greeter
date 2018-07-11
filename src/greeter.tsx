@@ -5,6 +5,8 @@ import * as GreeterActions from './greeterActions';
 import GreeterStore from './greeterStore';
 import Dispatcher from './dispatcher';
 
+import style from './greeter.scss';
+
 interface IProps {
     lead: string,
     message: string
@@ -38,7 +40,7 @@ class Greeter extends React.Component<IProps, IState> {
     
     render() {
         return <div>
-                    <h1>{this.props.lead}</h1>
+                    <h1 className={style.header}>{this.props.lead}</h1>
                     <hr />
                     <br />
                     <button onClick={ (e:React.MouseEvent<HTMLButtonElement>) => { this.changeToBeGreeted(this.state.tempInputValue) } }>Greet!</button>

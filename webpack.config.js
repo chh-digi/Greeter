@@ -19,9 +19,21 @@ module.exports = function (options) {
 			rules: [
 				{
 					test: /\.tsx?$/,
-					use: {
-						loader: 'ts-loader'
-					}
+					loader: 'ts-loader'
+				}, {
+					test: /\.scss$/,
+					use: [
+						{
+							loader: 'style-loader'
+						}, {
+							loader: 'css-loader',
+							options: {
+								modules: true
+							}
+						}, {
+							loader: 'sass-loader'
+						}
+					]
 				}
 			]
 		},
