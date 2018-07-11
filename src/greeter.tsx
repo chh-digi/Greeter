@@ -33,7 +33,7 @@ class Greeter extends React.Component<IProps, IState> {
             })
         })
 
-        Dispatcher.dispatch({ type: "CHANGE_TO_BE_GREETED", toBeGreeted: "Christoffer" });
+        Dispatcher.dispatch(new GreeterActions.GreeterAction("CHANGE_TO_BE_GREETED", "Christoffer"));
     }
     
     render() {

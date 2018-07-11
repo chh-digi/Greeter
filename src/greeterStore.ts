@@ -2,10 +2,12 @@ import { EventEmitter } from 'events';
 
 import Dispatcher from './dispatcher';
 
+import { GreeterAction } from './greeterActions'
+
 class greeterStore extends EventEmitter {
     toBeGreeted: string;
     
-    handleAction(action) {
+    handleAction(action: GreeterAction) {
         switch (action.type) {
             case "CHANGE_TO_BE_GREETED": {
                     this.changeToBeGreeted(action.toBeGreeted)
@@ -30,6 +32,6 @@ class greeterStore extends EventEmitter {
 }
 
 const greetStore = new greeterStore();
-Dispatcher.register((action: any) => greetStore.handleAction(action));
+Dispatcher.register((action: GreeterAction) => greetStore.handleAction(action));
 
 export default greetStore;
